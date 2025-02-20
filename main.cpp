@@ -13,7 +13,7 @@ bool is_valid_tile (int tile);
 
 int main () {
     // Declare a Box object (uncomment below for testing the constructor)
-    // Box the_box;
+    Box the_box;
 
     // For input of menu choice
     int menu_choice;
@@ -36,18 +36,18 @@ int main () {
                 get_tiles(tile_a, tile_b, tile_c);
                 cout << "Closing tiles: " << tile_a << ", " << tile_b << ", " << tile_c << endl;
                 // Remove comments below to test close method
-                // if (the_box.close(tile_a, tile_b, tile_c))
-                //     cout << "Tiles closed successfully.\n";
-                // else 
-                //     cout << "Error trying to close tiles.\n";
+                if (the_box.close(tile_a, tile_b, tile_c))
+                    cout << "Tiles closed successfully.\n";
+                else 
+                    cout << "Error trying to close tiles.\n";
                 break;
             case 2:
                 // Remove comment below to test score method
-                cout << "Current box score is " /* << the_box.score() */ << ".\n";
+                cout << "Current box score is " << the_box.score() << ".\n";
                 break;
             case 3:
                 // Remove comment below to test scr method
-                // cout << the_box.str() << "\n";
+                cout << the_box.str() << "\n";
                 break;
             case 9:
                 break;
